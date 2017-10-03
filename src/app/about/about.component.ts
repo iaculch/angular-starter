@@ -11,6 +11,19 @@ import { ActivatedRoute } from '@angular/router';
   template: `
     <h1>About</h1>
     <div>
+      <md-tab-group>
+        <md-tab label="Tab 1">
+          <p>Tab 1 Copy</p>
+        </md-tab>
+        <md-tab label="Tab 2 copy">
+          <p>Tab 2 Copy</p>
+        </md-tab>
+        <md-tab label="Tab 3 copy">
+          <p>Tab 3 Copy</p>
+        </md-tab>
+      </md-tab-group>
+    </div>
+    <div>
       For hot module reloading run
       <pre>npm run start:hmr</pre>
     </div>

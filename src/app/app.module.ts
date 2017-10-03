@@ -33,6 +33,8 @@ import { XLargeDirective } from './home/x-large';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
+import '@angular/material/prebuilt-themes/indigo-pink.css';
+import { MdTabsModule } from '@angular/material';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -66,6 +68,7 @@ type StoreType = {
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    MdTabsModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules

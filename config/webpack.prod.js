@@ -24,6 +24,7 @@ const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplaceme
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const ModuleConcatenationPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const BabiliPlugin = require('babili-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
 
 /**
@@ -181,7 +182,7 @@ module.exports = function (env) {
        *
        * NOTE: To debug prod builds uncomment //debug lines and comment //prod lines
        */
-      new UglifyJsPlugin({
+      /*new UglifyJsPlugin({
         parallel: true,
         uglifyOptions: {
           ie8: false,
@@ -194,7 +195,10 @@ module.exports = function (env) {
           }
         },
         warnings: true,
-      }),
+      }),*/
+
+      new BabiliPlugin({}, {comments: false}),
+
 
       /**
        * Plugin: NormalModuleReplacementPlugin
